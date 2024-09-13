@@ -1,0 +1,14 @@
+local deftest = require("deftest.deftest")
+
+local tests = {
+    -- Test list
+    require("tests.test_names_generator")
+}
+
+function init(self)
+    -- Uncomment to run tests:
+    -- for i = 1, #tests do
+    --     deftest.add(tests[i])
+    -- end
+    -- deftest.run()
+end

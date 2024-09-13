@@ -1,0 +1,25 @@
+local names_generator = require("unique_names_generator.names_generator")
+local adjectives = require("unique_names_generator.dictionaries.adjectives")
+local animals = require("unique_names_generator.dictionaries.animals")
+local colors = require("unique_names_generator.dictionaries.colors")
+local numbers = require("unique_names_generator.dictionaries.numbers")
+
+function init(self)
+    -- Usage example:
+    local generator = names_generator.new({
+        dictionaries = {
+            colors,
+            adjectives,
+            animals,
+            numbers({ min = 100, max = 999 })
+        },
+        style = "capital",
+        separator = ""
+    })
+
+    print(generator.generate())
+    print(generator.generate())
+    print(generator.generate())
+    print(generator.generate())
+    print(generator.generate())
+end
